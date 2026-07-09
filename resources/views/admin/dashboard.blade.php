@@ -9,8 +9,28 @@
         body {
             font-family: Inter, system-ui, Segoe UI, Arial;
             background: #0b0a09;
-            color: #fffaf0;
+            color: #ffffff;
             margin: 0;
+            min-height: 100vh;
+            position: relative;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            background: url('../images/sacs/couple.png') center/cover no-repeat;
+            opacity: .15;
+            filter: blur(2px);
+            z-index: -1;
+        }
+
+        body::after {
+            content: '';
+            position: fixed;
+            inset: 0;
+            background: rgba(5,5,5,0.85);
+            z-index: -1;
         }
 
         .wrap {
