@@ -31,11 +31,7 @@ RUN touch database/database.sqlite
 # Création des tables Laravel
 RUN php artisan migrate --force
 
-# Création des tables nécessaires aux drivers database
-RUN php artisan session:table || true
-RUN php artisan cache:table || true
-RUN php artisan queue:table || true
-RUN php artisan migrate --force
+
 
 # Lien storage
 RUN php artisan storage:link || true
